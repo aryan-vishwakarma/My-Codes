@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "iostream": "cpp"
+    },
+    "java.project.sourcePaths": [
+        "zjava",
+        ""
+    ]
+}
