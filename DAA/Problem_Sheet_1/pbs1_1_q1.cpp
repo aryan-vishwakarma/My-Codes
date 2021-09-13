@@ -1,3 +1,9 @@
+/*
+Question
+Some players play a game and their scores (positive integers) are recorded in the form of 
+an array. A player who scores more is the winner. Design an algorithm to find out the winner, 
+next winner, worst player, next worst player by scanning the score sheet only once. 
+*/
 #include <iostream>
 using namespace std;
 
