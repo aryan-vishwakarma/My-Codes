@@ -1,12 +1,12 @@
 
-t=int(input())
-a=0
-b=7
+t = int(input())
+a = 0
+b = 7
 for q in range(t):
-    n=int(input())
-    if(abs(a-n)<=abs(b-n)):
+    n = int(input())
+    if(abs(a-n) <= abs(b-n)):
         print('A')
-        a=n
+        a = n
     else:
         print('B')
-        b=n
+        b = n

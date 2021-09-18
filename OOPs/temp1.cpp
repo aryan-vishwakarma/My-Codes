@@ -1,21 +1,25 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 class abc
 {
-    public:
+public:
     int a;
-    abc(int t){
-        a=t;
+    abc(int t)
+    {
+        a = t;
     }
-    abc(abc &t){
-        a=t.a;
-        cout<<a<<endl;
+    abc(abc &t)
+    {
+        a = t.a;
+        cout << a << endl;
     }
-    ~abc(){
-        cout<<"Hey..."<<endl;
+    ~abc()
+    {
+        cout << "Hey..." << endl;
     }
 };
-void doo(){
+void doo()
+{
     static abc p(10);
 }
 int main()

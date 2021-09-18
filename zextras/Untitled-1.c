@@ -1,40 +1,47 @@
-#include<stdio.h>
+#include <stdio.h>
 int add(int, int);
 int subtract(int, int);
 int multiply(int, int);
 int divide(int, int);
 int main()
 {
-    int num1,num2,i=0;
+    int num1, num2, i = 0;
     char c;
     printf("Enter two numbers: ");
     scanf("%d %d", &num1, &num2);
-    while(i<1){
+    while (i < 1)
+    {
         printf("choose'+' for addition , '-' for subtraction, '*' for multiplication, '/' for division, 'e' for ending the operation");
-        scanf("%c",&c);
-        if(c=='+'){
-            printf("%d + %d = %d\n",num1,num2,add(num1, num2));
+        scanf("%c", &c);
+        if (c == '+')
+        {
+            printf("%d + %d = %d\n", num1, num2, add(num1, num2));
             i = i - 1;
         }
-        else if(c=='-'){
+        else if (c == '-')
+        {
             printf("%d - %d = %d\n", num1, num2, subtract(num1, num2));
             i = i - 1;
         }
-        else if(c=='*'){
+        else if (c == '*')
+        {
             printf("%d * %d = %d\n", num1, num2, multiply(num1, num2));
             i = i - 1;
-        }else if(c=='/'){
+        }
+        else if (c == '/')
+        {
             printf("%d / %d = %d\n", num1, num2, divide(num1, num2));
             i = i - 1;
         }
-        else if(c=='e'){
+        else if (c == 'e')
+        {
             printf("operation ended");
             break;
         }
         else
-        printf("Value of c is taken wrong.");
+            printf("Value of c is taken wrong.");
         printf("hello\n");
-        printf("%d\n",i);
+        printf("%d\n", i);
     }
     return 0;
 }

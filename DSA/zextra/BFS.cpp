@@ -1,37 +1,40 @@
-#include<iostream>
+#include <iostream>
 #include <list>
- 
+
 using namespace std;
 class Graph
 {
     int V;
     list<int> *adj;
+
 public:
     Graph(int V);
     void addEdge(int v, int w);
-    void BFS(int s); 
+    void BFS(int s);
 };
-Graph::Graph(int V){
+Graph::Graph(int V)
+{
     this->V = V;
     adj = new list<int>[V];
 }
-void Graph::addEdge(int v, int w){
+void Graph::addEdge(int v, int w)
+{
     adj[v].push_back(w);
 }
 void Graph::BFS(int s)
 {
     bool *visited = new bool[V];
-    for(int i = 0; i < V; i++)
+    for (int i = 0; i < V; i++)
         visited[i] = false;
 
     list<int> queue;
- 
+
     visited[s] = true;
     queue.push_back(s);
- 
+
     list<int>::iterator i;
- 
-    while(!queue.empty())
+
+    while (!queue.empty())
     {
         s = queue.front();
         cout << s << " ";
@@ -50,23 +53,24 @@ void Graph::BFS(int s)
 
 int main()
 {
-    cout<<"Enter n: ";
-    int n,v,w;
-    cin>>n;
+    cout << "Enter n: ";
+    int n, v, w;
+    cin >> n;
     Graph g(n);
-    
-    for (int i = 0; i < n; i++){
-        cout<<"Enter v and w\n";
-        cin>>v>>w;
-        g.addEdge(v,w);
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter v and w\n";
+        cin >> v >> w;
+        g.addEdge(v, w);
     }
 
     int s;
-    cout<<"Enter starting vertex: ";
-    cin>>s;
+    cout << "Enter starting vertex: ";
+    cin >> s;
     cout << "Following is Breadth First Traversal "
-         << "(starting from vertex "<<s<<") \n";
+         << "(starting from vertex " << s << ") \n";
     g.BFS(0);
- 
+
     return 0;
 }
