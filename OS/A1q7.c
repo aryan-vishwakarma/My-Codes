@@ -1,29 +1,22 @@
 #include <stdio.h>
-int main()
-{
+int main() {
     int n1, n2, n3;
     printf("Enter three numbers:\n");
     scanf("%d%d%d", &n1, &n2, &n3);
     int g = 0;
-    if (n1 >= n2)
-    {
-        if (n1 >= n3)
-        {
+    if (n1 >= n2) {
+        if (n1 >= n3) {
             g = n1;
         }
-        else
-        {
+        else {
             g = n3;
         }
     }
-    else
-    {
-        if (n2 >= n3)
-        {
+    else {
+        if (n2 >= n3) {
             g = n2;
         }
-        else
-        {
+        else {
             g = n3;
         }
     }
