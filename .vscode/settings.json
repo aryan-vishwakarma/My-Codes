@@ -2,7 +2,10 @@
     "files.associations": {
         "stdio.h": "c",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "regex": "cpp",
+        "algorithm": "cpp",
+        "streambuf": "cpp"
     },
     "java.project.sourcePaths": [
         "zjava",
