@@ -3,8 +3,7 @@
 #include <ctype.h>
 #include <cstdlib>
 using namespace std;
-void lcs(char* X, char* Y, char* lcs)
-{
+void lcs(char* X, char* Y, char* lcs) {
     int m = strlen(X);
     int n = strlen(Y);
     int L[m + 1][n + 1];
@@ -24,10 +23,8 @@ void lcs(char* X, char* Y, char* lcs)
     // char lcs[index + 1];
     lcs[index] = '\0';
     int i = m, j = n;
-    while (i > 0 && j > 0)
-    {
-        if (tolower(X[i - 1]) == tolower(Y[j - 1]))
-        {
+    while (i > 0 && j > 0) {
+        if (tolower(X[i - 1]) == tolower(Y[j - 1])) {
             lcs[index - 1] = tolower(X[i - 1]);
             i--;
             j--;

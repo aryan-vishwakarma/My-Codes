@@ -32,8 +32,7 @@ bool bfs(int rGraph[maxV][maxV], int s, int t, int parent[])
     }
     return false;
 }
-int fordFulkerson(int graph[maxV][maxV], int s, int t)
-{
+int fordFulkerson(int graph[maxV][maxV], int s, int t) {
     int u, v;
     int rGraph[maxV][maxV]; 
     for (u = 0; u < V; u++)
@@ -56,8 +55,7 @@ int fordFulkerson(int graph[maxV][maxV], int s, int t)
     }
     return max_flow;
 }
-int main()
-{
+int main() {
     int graph[maxV][maxV];
     cout << "Enter no. vertices : ";
     cin >> V;

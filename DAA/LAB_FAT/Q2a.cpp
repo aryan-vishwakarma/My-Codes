@@ -31,16 +31,16 @@ void inputSubset() {
 bool inSubset(int k) {
     for (int i = 0; i < sub_n; i++) {
         if (k == subset[i]) {
-            return false;
+            return true;
         }
     }
-    return true;
+    return false;
 }
 
 bool check() {
     for (int i = 0; i < V; i++) {
         for (int j = 0; j < V; j++) {
-            if (graph[i][j] != 0 && i!=j) {
+            if (graph[i][j] != 0 && i != j) {
                 if (inSubset(i) && inSubset(j)) {
                     return false;
                 }
@@ -54,9 +54,9 @@ int main() {
     inputGraph();
     inputSubset();
     if (check()) {
-        cout << "Yes, the candidate vertices are vertex cover\n";
+        cout << "Yes, the property hold\n";
     }
     else {
-        cout << "No, the candidate vertices are not vertex cover\n";
+        cout << "No, the property doesn't hold\n";
     }
 }
