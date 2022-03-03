@@ -5,7 +5,7 @@ string encrypt(string str, int skip) {
     int len = str.length();
     string str1 = "";
     for (int i = 0; i < len; i++) {
-        str1.push_back((char)('a' + (str.at(i) + skip - 'a') % 26));
+        str1.push_back((char)('A' + (str.at(i) + skip - 'A') % 26));
     }
     return str1;
 }
@@ -13,7 +13,7 @@ string decrypt(string str, int skips) {
     int len = str.length();
     string str1 = "";
     for (int i = 0; i < len; i++) {
-        str1.push_back((char)('a' + (str.at(i) - skips - 'a' + 26) % 26));
+        str1.push_back((char)('A' + (str.at(i) - skips - 'A' + 26) % 26));
     }
     return str1;
 }
@@ -24,7 +24,7 @@ int main() {
     cin >> str;
     cout << "Enter skips : ";
     cin >> skips;
-    if (skips <= 13) {
+    if (skips <= 25) {
         string str1 = encrypt(str, skips);
         cout << "Cipher text = " << str1 << endl;
         cout << "Decrypted text = " << decrypt(str1, skips) << endl;

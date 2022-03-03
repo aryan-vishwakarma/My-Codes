@@ -2,6 +2,10 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
     "files.associations": {
-        "iostream": "cpp"
-    }
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "ratio": "cpp",
+        "regex": "cpp"
+    },
+    "workbench.experimental.layoutControl.enabled":true
 }
